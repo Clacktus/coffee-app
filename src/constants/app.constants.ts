@@ -1,0 +1,4 @@
+export enum PROVIDERS {
+  BRANDS = 'COFFEE_BRANDS',
+  CONNECTION = 'CONNECTION',
+}
