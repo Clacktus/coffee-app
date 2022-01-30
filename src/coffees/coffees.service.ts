@@ -36,8 +36,8 @@ export class CoffeesService {
     private readonly configService: ConfigService,
   ) {
     console.log(coffeeBrands);
-    const databaseHost = this.configService.get<string>(
-      'POSTGRES_HOST',
+    const databaseHost = this.configService.get(
+      'database.host',
       'defaultValue',
     );
     console.log(databaseHost);
