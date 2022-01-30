@@ -1,7 +1,7 @@
 import { Injectable, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Event } from 'src/events/entities/event.entity';
-import { COFFEE_BRANDS } from './coffees.constants';
+import { TYPES } from 'src/utils/types';
 import { CoffeesController } from './coffees.controller';
 import { CoffeesService } from './coffees.service';
 import { Coffee } from './entities/coffee.entity';
@@ -27,7 +27,7 @@ export class CoffeeBrandsFactory {
     CoffeeBrandsFactory,
     // "useFactory" syntax example
     {
-      provide: COFFEE_BRANDS,
+      provide: TYPES.CoffeeBrands,
       useFactory: (brandsFactory: CoffeeBrandsFactory) =>
         brandsFactory.create(),
       inject: [CoffeeBrandsFactory],
